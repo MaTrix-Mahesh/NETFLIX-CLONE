@@ -1,0 +1,158 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+  color: #fff;
+}
+
+/* LEFT SIDE */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-left img {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* MENU */
+.navbar-left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-left ul li {
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navbar-left ul li:hover {
+  color: #b3b3b3;
+}
+
+/* RIGHT SIDE */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ICONS */
+.icons {
+  width: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons:hover {
+  opacity: 0.7;
+}
+
+/* TEXT */
+.navbar-right p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================= PROFILE ================= */
+
+.navbar-Profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Profile image */
+.navbar-Profile img:first-child {
+  width: 35px;
+  border-radius: 4px;
+}
+
+/* Caret icon */
+.navbar-Profile img:last-child {
+  width: 10px;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #141414;
+  padding: 10px 15px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* Hover to show */
+.navbar-Profile:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Dropdown text */
+.dropdown p {
+  cursor: pointer;
+}
+
+.dropdown p:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .navbar-left ul {
+    display: none;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-right p {
+    display: none;
+  }
+
+  .icons {
+    width: 18px;
+  }
+}
