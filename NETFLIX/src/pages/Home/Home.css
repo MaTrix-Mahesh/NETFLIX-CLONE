@@ -1,10 +1,11 @@
-/* MAIN HOME */
+/* ================= MAIN ================= */
+
 .home {
   background-color: #000;
   color: #fff;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 
 .hero {
   position: relative;
@@ -13,14 +14,13 @@
   overflow: hidden;
 }
 
-/* Background Image */
 .banner_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Dark overlay (Netflix feel) */
+/* Overlay */
 .hero::after {
   content: '';
   position: absolute;
@@ -33,7 +33,7 @@
   );
 }
 
-/* ================= HERO CONTENT ================= */
+/* ================= CAPTION ================= */
 
 .hero-caption {
   position: absolute;
@@ -43,18 +43,56 @@
   z-index: 1;
 }
 
-/* Title Image */
 .hero-caption img {
   width: 90%;
   max-width: 400px;
   margin-bottom: 20px;
 }
 
-/* Description */
 .hero-caption p {
   font-size: 14px;
   line-height: 1.5;
   color: #e5e5e5;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-btn {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Common button style */
+.hero-btn button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.hero-btn button:hover {
+  opacity: 0.8;
+}
+
+/* Button icons */
+.hero-btn button img {
+  width: 22px;
+}
+
+/* Dark button */
+.dark-btn {
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -90,4 +128,55 @@
   .hero-caption p {
     font-size: 12px;
   }
+
+  .hero-btn button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* BUTTON CONTAINER */
+.hero-btn {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}/* BUTTON */
+.hero-btn button {
+  display: flex;
+  align-items: center;      /* 👈 vertical center fix */
+  justify-content: center;
+  gap: 8px;
+
+  padding: 8px 18px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;           /* 👈 important */
+
+  background: #fff;
+  color: #000;
+
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ICON PERFECT SIZE */
+.hero-btn button img {
+  width: 16px;              /* 👈 slightly smaller */
+  height: 16px;
+  display: block;           /* 👈 inline gap remove */
+}
+
+/* TEXT FIX */
+.hero-btn button span {
+  display: flex;
+  align-items: center;
+}
+
+/* DARK BUTTON */
+.dark-btn {
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
 }
