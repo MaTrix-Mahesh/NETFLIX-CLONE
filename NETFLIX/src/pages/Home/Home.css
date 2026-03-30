@@ -1,0 +1,93 @@
+/* MAIN HOME */
+.home {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background Image */
+.banner_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay (Netflix feel) */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9) 10%,
+    rgba(0,0,0,0.4) 40%,
+    transparent 70%
+  );
+}
+
+/* ================= HERO CONTENT ================= */
+
+.hero-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  max-width: 600px;
+  z-index: 1;
+}
+
+/* Title Image */
+.hero-caption img {
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.hero-caption p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e5e5e5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .hero-caption {
+    bottom: 10%;
+    left: 4%;
+  }
+
+  .hero-caption img {
+    width: 70%;
+  }
+
+  .hero-caption p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-caption {
+    bottom: 8%;
+  }
+
+  .hero-caption img {
+    width: 80%;
+  }
+
+  .hero-caption p {
+    font-size: 12px;
+  }
+}
